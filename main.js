@@ -1,34 +1,34 @@
 const createPetBtn = document.getElementById("createPetBtn");
 
 class Pet {
-  constructor(petName, animalType, tiredness = 50, hunger = 50, loneliness = 50, happiness = 50) {
+  constructor(petName, animalType) {
     this.petName = petName;
     this.animalType = animalType;
-    this.tiredness = tiredness;
-    this.hunger = hunger;
-    this.loneliness = loneliness;
-    this.happiness = happiness;
+    this.tiredness = 50;
+    this.hunger = 50;
+    this.loneliness = 50;
+    this.happiness = 50;
   }
 
   nap() {
-    this.tiredness = this.setMax(this.tiredness-50);
-    this.happiness = this.setMax(this.happiness-20);
-    this.hunger = this.setMax(this.hunger+20);
-    this.loneliness = this.setMax(this.loneliness+20);
+    this.tiredness = this.setMax(this.tiredness - 50);
+    this.happiness = this.setMax(this.happiness - 20);
+    this.hunger = this.setMax(this.hunger + 20);
+    this.loneliness = this.setMax(this.loneliness + 20);
     console.log(`${this.petName} has taken a nap.`);
   }
 
   play() {
-    this.tiredness = this.setMax(this.tiredness+20);
-    this.happiness = this.setMax(this.happiness+30);
-    this.hunger = this.setMax(this.hunger+20);
-    this.loneliness = this.setMax(this.loneliness-10);
+    this.tiredness = this.setMax(this.tiredness + 20);
+    this.happiness = this.setMax(this.happiness + 30);
+    this.hunger = this.setMax(this.hunger + 20);
+    this.loneliness = this.setMax(this.loneliness - 10);
     console.log(`You played with ${this.petName}!`);
   }
 
   eat() {
-    this.hunger = this.setMax(this.hunger-60);
-    this.tiredness = this.setMax(this.tiredness+10)
+    this.hunger = this.setMax(this.hunger - 60);
+    this.tiredness = this.setMax(this.tiredness + 10)
     console.log(`${this.petName} has eaten.`);
   }
 
